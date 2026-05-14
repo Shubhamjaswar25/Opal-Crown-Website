@@ -670,7 +670,7 @@ function closePopup(){document.getElementById("bookingPopup").style.display = "n
             <input type="tel" name="Phone" placeholder="Phone Number" required>
             <textarea name="Event Type" placeholder="What type of event do you want to organise?" rows="4" required></textarea>
             <input type="date" name="Event Date" required>
-            <button type="button" onclick="sendEventEnquiry()">Submit Enquiry</button>
+            <button type="submit">Submit Enquiry</button>
         </form>
     </div>
 </div>
@@ -707,6 +707,54 @@ function openWhatsApp() {
 
   window.open(url, "_blank");
 }
+</script>
+<script>
+function submitEnquiry() {
+
+  const name = document.getElementById("eventName").value;
+  const phone = document.getElementById("eventPhone").value;
+  const details = document.getElementById("eventDetails").value;
+  const date = document.getElementById("eventDate").value;
+
+  if(name === "" || phone === "" || details === "" || date === "") {
+    alert("Please fill all fields");
+    return;
+  }
+
+  alert("Your enquiry has been submitted successfully!");
+
+  // Optional: clear form
+  document.getElementById("eventName").value = "";
+  document.getElementById("eventPhone").value = "";
+  document.getElementById("eventDetails").value = "";
+  document.getElementById("eventDate").value = "";
+}
+</script>
+<script>
+document.getElementById("eventForm").addEventListener("submit", async function(e) {
+
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if(response.ok){
+    alert("Event enquiry submitted successfully!");
+    form.reset();
+    closeEventPopup();
+  } else {
+    alert("Something went wrong. Please try again.");
+  }
+
+});
 </script>
 </body>
 </html>
