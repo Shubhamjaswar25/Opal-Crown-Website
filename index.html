@@ -485,29 +485,35 @@ footer{background:var(--black);padding:40px 5%;border-top:1px solid rgba(201,168
     </select>
     <button class="book-submit" onclick="openPopup()">Check Availability</button>
   </div>
-  <div style="margin-top:32px;display:flex;justify-content:center" class="reveal">
+  <div class="reveal" style="margin-top:32px;text-align:center;position:relative;z-index:1000;">
 
-  <a
-  href="https://wa.me/918796273003?text=Hello%20Opal%20Crown%20Hotel%2C%20I%20want%20to%20book%20a%20room."
-  target="_blank"
-  rel="noopener noreferrer"
-  onclick="event.stopPropagation(); window.open(this.href, '_blank'); return false;"
-  style="
-  display:inline-block;
-  padding:18px 40px;
-  border:1px solid rgba(245,240,230,0.4);
-  color:#f5f0e6;
-  text-decoration:none;
-  letter-spacing:4px;
-  font-size:11px;
-  text-transform:uppercase;
-  transition:0.3s;
-  cursor:pointer;
-  "
-  onmouseover="this.style.borderColor='#c9a84c';this.style.color='#c9a84c';"
-  onmouseout="this.style.borderColor='rgba(245,240,230,0.4)';this.style.color='#f5f0e6';"
+<a
+href="https://wa.me/918796273003?text=Hello%20Opal%20Crown%20Hotel,%20I%20want%20to%20book%20a%20room."
+target="_blank"
+rel="noopener noreferrer"
+
+style="
+display:inline-block;
+padding:18px 42px;
+border:1px solid rgba(245,240,230,0.4);
+color:#f5f0e6;
+background:transparent;
+text-decoration:none;
+font-size:11px;
+letter-spacing:3px;
+text-transform:uppercase;
+cursor:pointer;
+transition:0.3s;
+font-family:'Jost',sans-serif;
+position:relative;
+z-index:1001;
+"
+
+onmouseover="this.style.borderColor='#c9a84c';this.style.color='#c9a84c';"
+onmouseout="this.style.borderColor='rgba(245,240,230,0.4)';this.style.color='#f5f0e6';"
+
 >
-  BOOK THROUGH WHATSAPP
+BOOK THROUGH WHATSAPP
 </a>
 
 </div>
