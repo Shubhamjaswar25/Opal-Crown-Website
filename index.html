@@ -663,7 +663,7 @@ function closePopup(){document.getElementById("bookingPopup").style.display = "n
     <div class="popup-content">
         <span class="close-popup" onclick="closeEventPopup()">&times;</span>
         <h2>Event Enquiry</h2>
-        <form action="https://formsubmit.co/ajax/opalcrown2026@gmail.com" method="POST" id="eventForm">
+        <form action="https://formsubmit.co/opalcrown2026@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New Event Enquiry - Opal Crown">
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="Name" placeholder="Your Full Name" required>
@@ -706,28 +706,6 @@ function openWhatsApp() {
   const url = `https://wa.me/${phone}?text=${message}`;
 
   window.open(url, "_blank");
-}
-</script>
-<script>
-function submitEnquiry() {
-
-  const name = document.getElementById("eventName").value;
-  const phone = document.getElementById("eventPhone").value;
-  const details = document.getElementById("eventDetails").value;
-  const date = document.getElementById("eventDate").value;
-
-  if(name === "" || phone === "" || details === "" || date === "") {
-    alert("Please fill all fields");
-    return;
-  }
-
-  alert("Your enquiry has been submitted successfully!");
-
-  // Optional: clear form
-  document.getElementById("eventName").value = "";
-  document.getElementById("eventPhone").value = "";
-  document.getElementById("eventDetails").value = "";
-  document.getElementById("eventDate").value = "";
 }
 </script>
 <script>
